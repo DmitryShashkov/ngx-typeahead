@@ -16,6 +16,7 @@ src/*.js
 *.d.ts
 !make.js
 !bundles/*.js
+yarn.lock
 
 #################
 ## JetBrains

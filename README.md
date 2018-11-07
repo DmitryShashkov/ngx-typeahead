@@ -1,11 +1,11 @@
-[![Build Status](https://travis-ci.org/orizens/ngx-typeahead.svg?branch=master)](https://travis-ci.org/orizens/ngx-typeahead)
-[![npm version](https://badge.fury.io/js/ngx-typeahead.svg)](https://badge.fury.io/js/ngx-typeahead)
-![npm](https://img.shields.io/npm/dt/ngx-typeahead.svg)
-![npm](https://img.shields.io/npm/dm/ngx-typeahead.svg)
+[![Build Status](https://travis-ci.org/DmitryShashkov/ngx-typeahead.svg?branch=master)](https://travis-ci.org/DmitryShashkov/ngx-typeahead)
+[![npm version](https://badge.fury.io/js/cr-ngx-typeahead.svg)](https://badge.fury.io/js/cr-ngx-typeahead)
+![npm](https://img.shields.io/npm/dt/cr-ngx-typeahead.svg)
+![npm](https://img.shields.io/npm/dm/cr-ngx-typeahead.svg)
 
 # Angular Typeahead Component
 
-This is an extract of the typeahead component from the [open source](http://github.com/orizens/echoes-player) [Echoes Player](http://echoesplayer.com).
+This is a fork of [Orizens'](http://orizens.com) [ngx-typeahead](https://github.com/orizens/ngx-typeahead), which, in their turn, is an extract of the typeahead component from the [open source](http://github.com/orizens/echoes-player) [Echoes Player](http://echoesplayer.com).
 
 ## Data Sources Support
 
@@ -20,16 +20,6 @@ For **Angular 4.3/5.X** (With the new **HttpClient**)- please use version > 0.2.
 For **Angular 2, 4** (Without **HttpClient**)- please use version 0.0.3
 
 AOT compatible
-
-## Angular Consulting Services
-
-I'm a Senior Javascript Engineer & A Front End Consultant at [Orizens](http://orizens.com).
-My services include:
-
-- consulting on how to approach code in projects and keep it maintainable.
-- I provide project bootstrapping and development - while afterwards, I integrate it on site and guide the team on it.
-
-[Contact Me Here](http://orizens.com/contact)
 
 ## Installation
 
@@ -57,6 +47,7 @@ npm install ngx-typeahead --save-dev
 | taAllowEmpty         | boolean                    | optional, default: false   | if true, it allows empty strings to pass and invoke search                                                                                                             |
 | taCaseSensitive      | boolean                    | optional, default: false   | if true, comparing query is performed with case sensitive                                                                                                              |
 | taDisplayOnFocus     | boolean                    | optional, default: false   | if true, will display results (if exist) when input is clicked                                                                                                         |
+| taMapper             | function                   | optional, default: (items) => items | if provided, will be used to map server response to required format                                                                                           |
 
 ### Outputs
 

@@ -1,4 +1,4 @@
-# angular-library-starter
+compodoc -p tsconfig.json# angular-library-starter
 [![Build Status](https://travis-ci.org/robisim74/angular-library-starter.svg?branch=master)](https://travis-ci.org/robisim74/angular-library-starter)
 >Build an Angular library compatible with AoT compilation &amp; Tree shaking.
 
