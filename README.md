@@ -48,6 +48,7 @@ npm install ngx-typeahead --save-dev
 | taCaseSensitive      | boolean                    | optional, default: false   | if true, comparing query is performed with case sensitive                                                                                                              |
 | taDisplayOnFocus     | boolean                    | optional, default: false   | if true, will display results (if exist) when input is clicked                                                                                                         |
 | taMapper             | function                   | optional, default: (items) => items | if provided, will be used to map server response to required format                                                                                           |
+| taHeaders | Object | optional, default: {} | if provided, corresponding headers will be appended to each API request (object keys should be headers' names, and object values - well, headers' values) |
 
 ### Outputs
 

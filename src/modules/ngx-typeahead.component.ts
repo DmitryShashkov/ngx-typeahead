@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {
   ChangeDetectorRef,
   Component,
@@ -124,6 +124,8 @@ export class NgxTypeAheadComponent implements OnInit, OnDestroy {
   taDisplayOnFocus = false;
   @Input()
   taMapper = (items) => items;
+  @Input()
+  taHeaders = {};
 
   @Output()
   taSelected = new EventEmitter<string | any>();
@@ -267,7 +269,16 @@ export class NgxTypeAheadComponent implements OnInit, OnDestroy {
       this.taQueryParam,
       this.taParams
     );
+    
+    let headers = new HttpHeaders();
+    for (const key in this.taHeaders) {
+      if (this.taHeaders.hasOwnProperty(key)) {
+        headers = headers.append(key, this.taHeaders[key]);
+      }
+    }
+    
     const options = {
+      headers,
       params: searchConfig
     };
     const isJsonpApi = this.taApi === 'jsonp';
